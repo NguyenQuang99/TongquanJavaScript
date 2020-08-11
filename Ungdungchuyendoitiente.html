@@ -21,15 +21,14 @@
     <br/>
     <button type="submit" value="Convert"  onclick="convert1();">Convert</button>
 
-    <p></p>
+    <p id="result"></p>
     <script>
         function convert1() {
             let amount = document.getElementById("amount").value;
             let from = document.getElementById("from").value;
             let to = document.getElementById("to").value;
-             let result = amount * from / to;
-            document.write("Result is " + result);
-
+             let result1 = amount * from / to;
+            document.getElementById("result").innerHTML = result1
         }
     </script>
 
