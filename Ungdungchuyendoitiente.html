@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ungdungchuyendoitiente</title>
+</head>
+<body>
+<form id="dix " action="action_page.php" method="post">
+    <h2>Amount</h2>
+    <input type="text" id="amount"/>
+    <h2>From Currency</h2>
+    <select id="from">
+        <option value="VN">Việt Nam</option>
+        <option value="USA">Mỹ</option>
+    </select>
+    <h2>To Currency</h2>
+    <select id="to">
+        <option value="VNĐ">VNĐ</option>
+        <option value="USD">USD</option>
+    </select>
+    <br/>
+    <button type="submit" value="Convert"  onclick="convert1();">Convert</button>
+
+    <p></p>
+    <script>
+        function convert1() {
+            let amount = document.getElementById("amount").value;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+             let result = amount * from / to;
+            document.write("Result is " + result);
+
+        }
+    </script>
+
+</form>
+</body>
+</html>
